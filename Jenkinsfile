@@ -20,7 +20,7 @@ pipeline{
   }
   post{
     always{
-      
+      sh "mv --version"
     }
     success{
       echo "========pipeline executed successfully ========"
