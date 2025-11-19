@@ -31,7 +31,7 @@ pipeline{
   }
   post{
     always{
-      sh "mvn clean"
+      sh "mvn --version"
     }
     success{
       echo "========pipeline executed successfully ========"
