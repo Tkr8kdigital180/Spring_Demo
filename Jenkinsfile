@@ -7,6 +7,11 @@ pipeline{
     stage("Cleanup"){
       steps{
         sh "mvn --version"
+      }      
+    }
+
+    stage("Compile"){
+      steps{
         sh "mvn compile"
       }      
     }
