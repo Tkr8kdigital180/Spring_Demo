@@ -20,7 +20,7 @@ pipeline{
   }
   post{
     always{
-      sh "mv clean"
+      sh "mvn clean"
     }
     success{
       echo "========pipeline executed successfully ========"
@@ -30,5 +30,3 @@ pipeline{
     }
   }
 }
-
-
