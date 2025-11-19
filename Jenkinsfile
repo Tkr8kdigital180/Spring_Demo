@@ -1,37 +1,29 @@
 pipeline{
-    agent any
-
-    tools{
-        maven 'Maven'
+  agent any
+  tools{
+    maven 'Maven'
+  }
+  stages{
+    stage("Cleanup"){
+      steps{
+        sh "mvn --version"
+        sh "mvn compile"
+      }      
     }
-
-    stages{
-        stage("Cleanup"){
-        stage("Cleanup Project"){
-            steps{
-               sh "mvn --version"
-               sh "mvn clean"
-            }
-            post{
-                always{
-                   sh "rm -rf ./*"
-                }
-                success{
-                    echo "========A executed successfully========"
-                }
-                failure{
-                    echo "========A execution failed========"
-                }
-            }
-        }
+  }
+  post{
+    always{
+      sh "mvn clean"
     }
-    post{
-        always{
-            echo "========always========"
-        }
-        success{
-            echo "========pipeline executed successfully ========"
-        }
+    success{
+      echo "========pipeline executed successfully ========"
+    }
+    failure{
+      echo "========pipeline execution failed========"
+    }
+  }
+}
+
 
   } 
 
