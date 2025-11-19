@@ -22,8 +22,6 @@ pipeline{
 
     } 
 
-    stages{ 
-
     stage("Compile"){ 
 
       steps{ 
@@ -32,8 +30,6 @@ pipeline{
       }       
 
     } 
-
-  } 
 
   post{ 
 
