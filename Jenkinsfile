@@ -10,11 +10,17 @@ pipeline{
       }      
     }
 
+    stage("Compile"){
+      steps{
+        sh "mvn compile"
+      }      
+    }
+
    
   }
   post{
     always{
-      sh "mvn clean"
+      
     }
     success{
       echo "========pipeline executed successfully ========"
