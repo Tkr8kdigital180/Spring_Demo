@@ -22,14 +22,6 @@ pipeline{
 
     } 
 
-    stage("Compile"){ 
-
-      steps{ 
-
-        sh "mvn compile"  
-      }       
-
-    } 
 
   post{ 
 
@@ -54,4 +46,4 @@ pipeline{
   } 
 
 } 
-}
+
