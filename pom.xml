@@ -62,6 +62,7 @@
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
+				<finalName>Kurs3-(TKR).jar</finalName>
             </plugin>
 		</plugins>
 	</build>
