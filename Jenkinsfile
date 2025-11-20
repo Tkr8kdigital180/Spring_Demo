@@ -34,7 +34,7 @@ pipeline{
       }      
     }
 
-    stage("Dependency:Three"){
+    stage("Dependency:Thre"){
       steps{
         sh "mvn dependency:tree"
       }      
