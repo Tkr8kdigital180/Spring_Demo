@@ -30,7 +30,7 @@
 	<properties>
 		<java.version>21</java.version>
 		<env.name>LOCAL</env.name>
-        <packageName>Kurs3-<TKR>-local</packageName>
+        <packageName>Kurs3-TKR-local</packageName>
     </properties>
 	<dependencies>
 		<dependency>
