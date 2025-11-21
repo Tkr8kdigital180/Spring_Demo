@@ -51,6 +51,25 @@
         </dependency>
 	</dependencies>
 
+	<profiles> 
+     <profile> 
+        <id>dev</id> 
+        <properties> 
+            <env.name>DEV</env.name> 
+        </properties> 
+        <activation> 
+            <activeByDefault>true</activeByDefault> 
+        </activation> 
+     </profile> 
+ 
+     <profile> 
+        <id>prod</id> 
+        <properties> 
+            <env.name>PROD</env.name> 
+        </properties> 
+     </profile> 
+   </profiles> 
+ 
 	<build>
 		<plugins>
 			<plugin>
