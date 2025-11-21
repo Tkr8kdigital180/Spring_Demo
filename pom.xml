@@ -29,7 +29,9 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
-	</properties>
+		<env.name>LOCAL</env.name>
+        <packageName>Kurs3-<TKR>-local</packageName>
+    </properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -64,7 +66,7 @@
 				</configuration>
             </plugin>
 		</plugins>
-		<finalName>Kurs3-(TKR).jar</finalName>
+		<finalName>${packageName}</finalName>
 	</build>
 
 </project>
