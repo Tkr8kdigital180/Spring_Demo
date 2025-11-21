@@ -1,5 +1,11 @@
 pipeline{
   agent any
+
+  parameters {
+    choice(name: 'PROFILE', choices: ['dev', 'prod'], description: 'Maven-Profil')
+    choice(name: 'SKIP_TESTS', choices: ['true', 'false'], description: 'Tests überspringen?')
+  }
+  
   tools{
     maven 'Maven'
   }
@@ -27,6 +33,13 @@ pipeline{
         sh "mvn package"
       }      
     }
+
+    stage('Build') {
+      steps {
+        sh "mvn clean package -P${PROFILE} -DskipTests=${SKIP_TESTS}"
+      }
+    }
+
 
     stage("Install"){
       steps{
